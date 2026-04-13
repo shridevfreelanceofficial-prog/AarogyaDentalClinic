@@ -42,7 +42,7 @@ export default function AppointmentModal({ isOpen, onClose }: AppointmentModalPr
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4"
+          className="fixed inset-0 z-[100] flex items-start sm:items-center justify-center p-4 pt-28 sm:pt-4"
         >
           {/* Backdrop */}
           <motion.div
@@ -59,7 +59,7 @@ export default function AppointmentModal({ isOpen, onClose }: AppointmentModalPr
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-            className="relative bg-white rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden"
+            className="relative bg-white rounded-2xl shadow-2xl w-[92vw] max-w-sm sm:w-full sm:max-w-lg overflow-hidden max-h-[calc(100vh-8rem)] sm:max-h-[90vh] flex flex-col"
           >
             {/* Header */}
             <div className="bg-gradient-to-r from-primary-500 to-secondary-500 p-6 text-white">
@@ -74,7 +74,7 @@ export default function AppointmentModal({ isOpen, onClose }: AppointmentModalPr
             </div>
 
             {/* Content */}
-            <div className="p-6">
+            <div className="p-6 overflow-y-auto flex-1 min-h-0">
               {isSubmitted ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
