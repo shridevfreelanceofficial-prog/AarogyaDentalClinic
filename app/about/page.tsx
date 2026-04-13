@@ -25,22 +25,22 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[50vh] min-h-[400px]">
+      <section className="relative w-full aspect-[1216/312] max-h-[520px] bg-black">
         <Image
           src="/images/aboutus/hero.png"
           alt="About Aarogya Dental Clinic"
           fill
-          className="object-cover"
+          className="object-contain"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
-        <div className="absolute inset-0 flex items-center">
+        <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
+        <div className="absolute inset-0 flex items-end md:items-center">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="max-w-2xl text-white"
+              className="hidden md:block max-w-2xl text-white pb-8 md:pb-0"
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">About Us</h1>
               <p className="text-lg md:text-xl text-gray-200">
@@ -198,18 +198,27 @@ export default function AboutPage() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="rounded-2xl overflow-hidden shadow-lg h-[400px]"
+              className="rounded-2xl overflow-hidden shadow-lg h-[400px] relative"
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.6789456789012!2d73.12345678901234!3d19.012345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDAwJzQ0LjQiTiA3M8KwMDcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1234567890123"
+                src="https://www.google.com/maps/embed?pb=!4v1776086551013!6m8!1m7!1sFt-SuNba1H6NmdBw7F7axg!2m2!1d19.00289955109799!2d73.11692951790013!3f74.18881009955876!4f3.4024527625993954!5f0.7820865974627469"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="grayscale hover:grayscale-0 transition-all duration-500"
+                className="transition-all duration-500"
               />
+              <a
+                href="https://maps.app.goo.gl/qmwHvZQ4toijkNZEA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-4 left-4 bg-white/90 hover:bg-white text-primary-600 font-medium px-4 py-2 rounded-lg shadow-lg transition-all duration-300 flex items-center gap-2"
+              >
+                <MapPin className="w-4 h-4" />
+                Open in Google Maps
+              </a>
             </motion.div>
           </div>
         </div>

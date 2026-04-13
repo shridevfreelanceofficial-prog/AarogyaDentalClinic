@@ -56,15 +56,24 @@ export default function ContactPage() {
       {/* Map Section */}
       <section className="h-[400px] relative">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.6789456789012!2d73.12345678901234!3d19.012345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDAwJzQ0LjQiTiA3M8KwMDcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1234567890123"
+          src="https://www.google.com/maps/embed?pb=!4v1776086551013!6m8!1m7!1sFt-SuNba1H6NmdBw7F7axg!2m2!1d19.00289955109799!2d73.11692951790013!3f74.18881009955876!4f3.4024527625993954!5f0.7820865974627469"
           width="100%"
           height="100%"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          className="grayscale hover:grayscale-0 transition-all duration-500"
+          className="transition-all duration-500"
         />
+        <a
+          href="https://maps.app.goo.gl/qmwHvZQ4toijkNZEA"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute bottom-4 left-4 bg-white/90 hover:bg-white text-primary-600 font-medium px-4 py-2 rounded-lg shadow-lg transition-all duration-300 flex items-center gap-2 z-10"
+        >
+          <MapPin className="w-4 h-4" />
+          Open in Google Maps
+        </a>
       </section>
 
       {/* Contact Section */}

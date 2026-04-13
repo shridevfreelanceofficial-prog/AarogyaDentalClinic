@@ -15,6 +15,20 @@ export default function ClientLayout({
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
 
+  // Auto-popup modal on homepage after 5 seconds
+  useEffect(() => {
+    if (pathname === '/') {
+      const alreadyShown = typeof window !== 'undefined' && window.sessionStorage.getItem('appointmentModalShown')
+      if (alreadyShown) return
+
+      const timer = setTimeout(() => {
+        setIsModalOpen(true)
+        window.sessionStorage.setItem('appointmentModalShown', '1')
+      }, 5000)
+      return () => clearTimeout(timer)
+    }
+  }, [pathname])
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)

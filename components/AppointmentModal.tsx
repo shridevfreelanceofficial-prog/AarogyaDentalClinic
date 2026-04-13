@@ -97,11 +97,11 @@ export default function AppointmentModal({ isOpen, onClose }: AppointmentModalPr
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="form-input"
-                      placeholder="Enter your full name"
+                      className="form-input text-sm sm:text-base"
+                      placeholder="Full name"
                     />
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="form-label">Email *</label>
                       <input
@@ -110,8 +110,8 @@ export default function AppointmentModal({ isOpen, onClose }: AppointmentModalPr
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="form-input"
-                        placeholder="your@email.com"
+                        className="form-input text-sm sm:text-base"
+                        placeholder="Email"
                       />
                     </div>
                     <div>
@@ -122,12 +122,12 @@ export default function AppointmentModal({ isOpen, onClose }: AppointmentModalPr
                         value={formData.phone}
                         onChange={handleChange}
                         required
-                        className="form-input"
-                        placeholder="Your phone number"
+                        className="form-input text-sm sm:text-base"
+                        placeholder="Phone"
                       />
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="form-label">Preferred Date *</label>
                       <input
@@ -136,7 +136,7 @@ export default function AppointmentModal({ isOpen, onClose }: AppointmentModalPr
                         value={formData.date}
                         onChange={handleChange}
                         required
-                        className="form-input"
+                        className="form-input text-sm sm:text-base"
                       />
                     </div>
                     <div>
@@ -146,9 +146,9 @@ export default function AppointmentModal({ isOpen, onClose }: AppointmentModalPr
                         value={formData.service}
                         onChange={handleChange}
                         required
-                        className="form-input"
+                        className="form-input text-sm sm:text-base"
                       >
-                        <option value="">Select a service</option>
+                        <option value="">Service</option>
                         <option value="root-canal">Root Canal</option>
                         <option value="dental-implant">Dental Implant</option>
                         <option value="crowns-bridges">Crowns & Bridges</option>
