@@ -18,8 +18,8 @@ const galleryCategories = [
   },
   {
     name: 'Braces Treatment',
-    folder: 'Composite_Treatment',
-    images: ['g11.png', 'g12.png'],
+    folder: 'Braces_Treatment',
+    images: ['g12.png'],
   },
   {
     name: 'Treatment Pics',
@@ -178,7 +178,7 @@ export default function GalleryPage() {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="relative max-w-5xl max-h-[90vh] aspect-video"
+              className="relative w-full max-w-5xl h-[80vh] sm:h-[90vh]"
               onClick={(e) => e.stopPropagation()}
             >
               <Image
